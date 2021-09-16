@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block body %}
+
+
+
+
+     {% for bericht in berichten %}
+
+
+         <div class="news">
+
+             <h4 id="id">
+                 {{ bericht.id }}
+             </h4>
+
+              {{ bericht.nieuws }}
+
+{#             {{ form(form) }}#}
+         </div>
+
+
+         <style>
+             .news {
+                 border: 1px solid black;
+                 padding: 50px;
+                 margin-left: auto;
+                 margin-right: auto;
+                 width: 50%;
+                 text-align: left;
+             }
+
+             .news:hover {
+                 background-color: black;
+                 color: #FFFFFF;
+             }
+
+             #id {
+                 font-size: 25px;
+             }
+
+             .page {
+                 border: 1px solid;
+                 background-color: #000000;
+                 color: #FFFFFF;
+                 font-size: 5vh;
+
+             }
+
+             .current {
+                 border: 1px solid;
+                 background-color: #000000;
+                 color: #FFFFFF;
+                 font-size: 5vh;
+             }
+
+         </style>
+
+
+         <footer>
+
+             <div class="navigation">
+                 {{ knp_pagination_render(berichten) }}
+             </div>
+
+{#             <a href="?p= {{ bericht.id }}"> {{ ++bericht.id }}</a>#}
+{#             rjkeoiewjerwjoiewroewr newoijnrio erjwoijweoj owiejewiojweoirjewoewrijewoiewrjweiojwoiwei jwoij iojw eiojwoiwr jwe riojweiowerjio#}
+{#            {{ count }}#}
+         </footer>
+        {% endfor %}
+
+
+{% endblock %}
